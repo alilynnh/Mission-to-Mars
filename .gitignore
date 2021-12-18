@@ -1,5 +1,7 @@
 # local files to ignore
 Practice.ipynb
+Mission-to-Mars_Challenge_starter_code_copy.ipynb
+index.htmlgit 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
