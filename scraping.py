@@ -1,4 +1,5 @@
 # Import Splinter, BeautifulSoup, and Pandas
+from bs4.builder import TreeBuilderRegistry
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
@@ -9,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def scrape_all():
     # Initiate headless driver for deployment
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     news_title, news_p = mars_news(browser)
     
@@ -96,7 +97,7 @@ def mars_facts():
     df.set_index('Description', inplace=True)
 
     # Convert dataframe into HTML format, add bootstrap
-    return df.to_html(classes="table table-striped")
+    return df.to_html(classes="table table-hover") # now each row changes color when mouse hovers
 
 def hemisphere_url(browser):
     # visit url

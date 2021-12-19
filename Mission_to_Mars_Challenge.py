@@ -89,6 +89,7 @@ hemi_soup = soup(html, 'html.parser')
 hemi_list = hemi_soup.find_all('div', class_ = 'item')
 
 for hemi in hemi_list:
+    hemispheres = {}
     # get title
     title = hemi.find('h3').text
     # get partial url
@@ -100,8 +101,10 @@ for hemi in hemi_list:
     hemi_soup2 = soup(full_image, 'lxml')
     # get full image url
     img_url = url + hemi_soup2.find('div', class_ = 'downloads').find('a')['href']
-    # append list
-    hemisphere_image_urls.append({"img_url" : img_url, "title" : title})
+    # append 
+    hemispheres["img_url"] = img_url
+    hemispheres["title"] = title
+    hemisphere_image_urls.append(hemispheres)
 
 # 4. Print the list that holds the dictionary of each image url and title.
 hemisphere_image_urls
