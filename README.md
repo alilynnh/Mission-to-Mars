@@ -8,7 +8,7 @@ The current project involved creating a web app that scrapes for and displays th
 
 The project was completed using MongoDB, Flask, BeautifulSoup, and Splinter. 
 
-## Bootstrap Additions
+## Modifications
 Once the basic information was gathered onto the web app, modifications were made that enhanced appearnace and the flexibility of the app on mobile and desktop platforms. 
 
 More specifically, the following changes were made: 
