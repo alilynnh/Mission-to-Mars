@@ -17,8 +17,8 @@ More specifically, the following changes were made:
 - General background and header background colors were changed. 
 - Button color was changed, and vibrancy increases upon mouse hover.  
 
-**Desktop View**
+**Desktop View**   
 ![](Resources/mars_desktop_app.gif)
 
-**Mobile View** 
+**Mobile View**   
 ![](Resources/mars_mobile_app.gif)
